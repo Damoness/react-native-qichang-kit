@@ -1,4 +1,4 @@
-import ThemeProvider from './ThemeProvider';
+import ThemeProvider, { ThemeContext } from './ThemeProvider';
 import colors from './colors';
 import colorsDark from './colorsDark';
 import withTheme from './withTheme';
@@ -11,4 +11,4 @@ export type ThemeProps = {
   theme: Theme;
 };
 
-export { ThemeProvider, colors, colorsDark, withTheme };
+export { ThemeProvider, colors, colorsDark, withTheme, ThemeContext };

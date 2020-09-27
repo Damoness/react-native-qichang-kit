@@ -6,7 +6,7 @@ import NavigationBackComponent from './NavigationBackComponent';
 import { Loading, LoadingComponent, ArticleLoading } from './Loading';
 import ErrorComponent from './ErrorComponent';
 
-import { ThemeProvider } from './config';
+import { ThemeProvider, ThemeContext, withTheme } from './config';
 
 // import {
 //   RefreshListView,
@@ -15,6 +15,8 @@ import { ThemeProvider } from './config';
 // } from '@damoness/react-native-refresh';
 
 export {
+  withTheme,
+  ThemeContext,
   Avatar,
   Button,
   //Image,
