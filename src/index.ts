@@ -4,6 +4,7 @@ import Button from './Button';
 import DropdownArrow from './DropdownArrow';
 import NavigationBackComponent from './NavigationBackComponent';
 import { Loading, LoadingComponent, ArticleLoading } from './Loading';
+import ErrorComponent from './ErrorComponent';
 
 import { ThemeProvider } from './config';
 
@@ -16,13 +17,14 @@ import { ThemeProvider } from './config';
 export {
   Avatar,
   Button,
-  DropdownArrow,
   //Image,
   Loading,
   LoadingComponent,
   ArticleLoading,
   NavigationBackComponent,
   ThemeProvider,
+  ErrorComponent,
+  DropdownArrow,
   // RefreshListView,
   // RefreshState,
   // PullDownRefreshAndPullUpLoadMoreListView,
