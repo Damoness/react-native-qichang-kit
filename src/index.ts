@@ -4,6 +4,9 @@ import Button from './Button';
 import DropdownArrow from './DropdownArrow';
 import NavigationBackComponent from './NavigationBackComponent';
 import { Loading, LoadingComponent, ArticleLoading } from './Loading';
+
+import { ThemeProvider } from './config';
+
 // import {
 //   RefreshListView,
 //   RefreshState,
@@ -19,6 +22,7 @@ export {
   LoadingComponent,
   ArticleLoading,
   NavigationBackComponent,
+  ThemeProvider,
   // RefreshListView,
   // RefreshState,
   // PullDownRefreshAndPullUpLoadMoreListView,
