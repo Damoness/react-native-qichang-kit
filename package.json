@@ -1,5 +1,5 @@
 {
-  "name": "react-native-qichang-kit",
+  "name": "@damoness/react-native-qichang-kit",
   "version": "0.1.0",
   "description": "QiChang UI 框架",
   "main": "lib/commonjs/index",
@@ -119,7 +119,10 @@
       ]
     }
   },
-  "eslintIgnore": ["node_modules/", "lib/"],
+  "eslintIgnore": [
+    "node_modules/",
+    "lib/"
+  ],
   "prettier": {
     "quoteProps": "consistent",
     "singleQuote": true,
@@ -130,6 +133,10 @@
   "@react-native-community/bob": {
     "source": "src",
     "output": "lib",
-    "targets": ["commonjs", "module", "typescript"]
+    "targets": [
+      "commonjs",
+      "module",
+      "typescript"
+    ]
   }
 }
