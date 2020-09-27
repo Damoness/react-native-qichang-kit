@@ -22,4 +22,6 @@ const ThemeProvider: React.FC = ({ children }) => {
   );
 };
 
+export const ThemeConsumer = ThemeContext.Consumer;
+
 export default ThemeProvider;

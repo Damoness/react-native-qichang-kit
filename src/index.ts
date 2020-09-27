@@ -6,7 +6,12 @@ import NavigationBackComponent from './NavigationBackComponent';
 import { Loading, LoadingComponent, ArticleLoading } from './Loading';
 import ErrorComponent from './ErrorComponent';
 
-import { ThemeProvider, ThemeContext, withTheme } from './config';
+import {
+  ThemeProvider,
+  ThemeContext,
+  withTheme,
+  ThemeConstants,
+} from './config';
 
 // import {
 //   RefreshListView,
@@ -16,6 +21,7 @@ import { ThemeProvider, ThemeContext, withTheme } from './config';
 
 export {
   withTheme,
+  ThemeConstants,
   ThemeContext,
   Avatar,
   Button,

@@ -11,4 +11,16 @@ export type ThemeProps = {
   theme: Theme;
 };
 
-export { ThemeProvider, colors, colorsDark, withTheme, ThemeContext };
+const ThemeConstants = {
+  light: colors,
+  dark: colorsDark,
+};
+
+export {
+  ThemeProvider,
+  colors,
+  colorsDark,
+  withTheme,
+  ThemeContext,
+  ThemeConstants,
+};
