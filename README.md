@@ -11,11 +11,8 @@ npm install react-native-qichang-kit
 ## Usage
 
 ```js
-import QichangKit from "react-native-qichang-kit";
 
-// ...
 
-const result = await QichangKit.multiply(3, 7);
 ```
 
 ## Contributing
