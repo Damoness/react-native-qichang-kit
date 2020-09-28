@@ -6,7 +6,7 @@ import NavigationBackComponent from './NavigationBackComponent';
 import { Loading, LoadingComponent, ArticleLoading } from './Loading';
 import ErrorComponent from './ErrorComponent';
 import ThemedLineView from './Themed/ThemedLineView';
-import ThemedText from './Themed/ThemedText';
+import ThemedText, { TextType as ThemedTextType } from './Themed/ThemedText';
 
 import {
   ThemeProvider,
@@ -37,6 +37,7 @@ export {
   DropdownArrow,
   ThemedLineView,
   ThemedText,
+  ThemedTextType,
   // RefreshListView,
   // RefreshState,
   // PullDownRefreshAndPullUpLoadMoreListView,

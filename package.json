@@ -1,6 +1,6 @@
 {
   "name": "@damoness/react-native-qichang-kit",
-  "version": "0.4.6",
+  "version": "0.4.8",
   "description": "QiChang UI 框架",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -59,12 +59,14 @@
     "prettier": "^2.0.5",
     "react": "16.11.0",
     "react-native": "0.62.2",
+    "react-native-fast-image": "^8.3.2",
     "release-it": "^13.5.8",
     "typescript": "^3.8.3"
   },
   "peerDependencies": {
     "react": "*",
-    "react-native": "*"
+    "react-native": "*",
+    "react-native-fast-image": "*"
   },
   "jest": {
     "preset": "react-native",
@@ -138,8 +140,5 @@
       "module",
       "typescript"
     ]
-  },
-  "dependencies": {
-    "react-native-fast-image": "^8.3.2"
   }
 }
