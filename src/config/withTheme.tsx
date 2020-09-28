@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
 import { ThemeContext } from './ThemeProvider';
 import colors from './colors';
-const defaultTheme = {
+const defaultTheme: {
+  colors: typeof colors;
+  theme: 'light' | 'dark';
+} = {
   colors: colors,
+  theme: 'light',
 };
 
 const withTheme = <P extends {}>(WrappedComponent: React.ComponentType<P>) => {

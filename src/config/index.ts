@@ -5,6 +5,7 @@ import withTheme from './withTheme';
 
 export type Theme = {
   colors: typeof colors;
+  theme: 'light' | 'dark';
 };
 
 export type ThemeProps = {
