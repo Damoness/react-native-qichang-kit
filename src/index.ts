@@ -8,6 +8,8 @@ import ErrorComponent from './ErrorComponent';
 import ThemedLineView from './Themed/ThemedLineView';
 import ThemedText, { TextType as ThemedTextType } from './Themed/ThemedText';
 
+import Swiper from './Swiper';
+
 import {
   ThemeProvider,
   ThemeContext,
@@ -38,6 +40,7 @@ export {
   ThemedLineView,
   ThemedText,
   ThemedTextType,
+  Swiper,
   // RefreshListView,
   // RefreshState,
   // PullDownRefreshAndPullUpLoadMoreListView,
