@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
-import { View, Image, StyleSheet } from 'react-native';
+import { View, Image, StyleSheet, ViewStyle } from 'react-native';
 
-export default class ArticleLoading extends Component {
+type Props = {
+  style?: ViewStyle;
+};
+
+export default class ArticleLoading extends Component<Props> {
   render() {
     return (
-      <View style={styles.container}>
+      <View style={[styles.container, this.props.style]}>
         <Image
           style={styles.image}
           resizeMode="cover"
