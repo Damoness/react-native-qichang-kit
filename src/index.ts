@@ -15,6 +15,7 @@ import {
   ThemeContext,
   withTheme,
   ThemeConstants,
+  ThemeProps,
 } from './config';
 
 // import {
@@ -25,6 +26,7 @@ import {
 
 export {
   withTheme,
+  ThemeProps,
   ThemeConstants,
   ThemeContext,
   Avatar,
