@@ -21,7 +21,7 @@ class Loading extends React.Component<Props> {
       >
         <Image
           style={styles.image}
-          source={require('./assets/qichang_buy_car_logo_loading.gif')}
+          source={require('./assets/qichang_logo_loading.gif')}
         />
       </View>
     );
