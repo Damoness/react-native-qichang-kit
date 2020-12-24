@@ -20,7 +20,7 @@ type Props = {
 } & ThemeProps;
 
 const DefaultSource = {
-  dark: require('./chexixiangqing_night.png'),
+  dark: require('./chexixiangqing_evening.png'),
   light: require('./chexixiangqing.png'),
 };
 
