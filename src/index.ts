@@ -16,6 +16,7 @@ import {
   withTheme,
   ThemeConstants,
   ThemeProps,
+  useTheme,
 } from './config';
 
 // import {
@@ -26,6 +27,7 @@ import {
 
 export {
   withTheme,
+  useTheme,
   ThemeProps,
   ThemeConstants,
   ThemeContext,
