@@ -12,8 +12,13 @@ export const ThemeContext = React.createContext<{
   theme: 'light',
 });
 
-const ThemeProvider: React.FC = ({ children }) => {
-  let color = useColorScheme() || 'light';
+type Props = {
+  theme?: 'light' | 'dark';
+};
+
+const ThemeProvider: React.FC<Props> = ({ children, theme }) => {
+  let systemColor = useColorScheme();
+  let color = theme || systemColor || 'light';
   const co = color === 'dark' ? colorsDark : colors;
   return (
     <ThemeContext.Provider value={{ colors: co, theme: color }}>
