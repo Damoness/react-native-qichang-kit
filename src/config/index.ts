@@ -1,4 +1,4 @@
-import ThemeProvider, { ThemeContext } from './ThemeProvider';
+import ThemeProvider, { ThemeContext, useTheme } from './ThemeProvider';
 import colors from './colors';
 import colorsDark from './colorsDark';
 import withTheme from './withTheme';
@@ -19,6 +19,7 @@ const ThemeConstants = {
 
 export {
   ThemeProvider,
+  useTheme,
   colors,
   colorsDark,
   withTheme,

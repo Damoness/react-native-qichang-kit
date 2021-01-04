@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useColorScheme } from 'react-native';
 
 import colors from './colors';
@@ -28,5 +28,10 @@ const ThemeProvider: React.FC<Props> = ({ children, theme }) => {
 };
 
 export const ThemeConsumer = ThemeContext.Consumer;
+
+export const useTheme = () => {
+  const theme = useContext(ThemeContext);
+  return theme;
+};
 
 export default ThemeProvider;
