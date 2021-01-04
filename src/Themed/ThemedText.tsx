@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, TextStyle, TextProps, useColorScheme } from 'react-native';
+import { Text, TextStyle, TextProps } from 'react-native';
 import { ThemeProps, withTheme } from '../config';
 
 export enum TextType {
@@ -21,10 +21,9 @@ const ThemedText: React.FC<Props> = ({
   children,
   darkThemeColor,
   type,
-  theme: { colors },
+  theme: { colors, theme },
   ...otherStyles
 }) => {
-  let theme = useColorScheme();
   let { color } = style || {};
 
   if (theme == 'dark') color = darkThemeColor || '#FFFFFF';

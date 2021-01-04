@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, StyleSheet, ViewStyle, useColorScheme } from 'react-native';
+import { View, StyleSheet, ViewStyle } from 'react-native';
+import { useTheme } from '../config';
 
 const LINE_COLOR = {
   light: '#E8E8E8',
@@ -11,7 +12,7 @@ type Props = {
 };
 
 const ThemedLineView: React.FC<Props> = ({ style }) => {
-  let theme = useColorScheme() || 'light';
+  let theme = useTheme().theme;
   return (
     <View
       style={[styles.lineView, { backgroundColor: LINE_COLOR[theme] }, style]}
