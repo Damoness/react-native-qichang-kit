@@ -10,7 +10,13 @@ class Loading extends React.Component<Props> {
   render() {
     const { backgroundColorC11 } = this.props.theme.colors;
 
+    let source =
+      this.props.theme.theme === 'dark'
+        ? require('./assets/qichang_logo_loading_dark.gif')
+        : require('./assets/qichang_logo_loading_light.gif');
+
     const style = this.props.style;
+
     return (
       <View
         style={[
@@ -19,10 +25,7 @@ class Loading extends React.Component<Props> {
           style,
         ]}
       >
-        <Image
-          style={styles.image}
-          source={require('./assets/qichang_logo_loading.gif')}
-        />
+        <Image style={styles.image} source={source} />
       </View>
     );
   }
