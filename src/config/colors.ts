@@ -1,6 +1,9 @@
 export default {
   backgroundColor: 'white', // 背景色
 
+  color31: '#000000', //纯黑
+  color32: '#FFFFFF', //纯白
+
   fontColorC0: '#000000',
   fontColorC1: '#191919', //大标题
   fontColorC2: '#222222', //正文大标题

@@ -1,5 +1,9 @@
 export default {
   backgroundColor: '#282B32',
+
+  color31: '#FFFFFF', //纯白
+  color32: '#000000', //纯黑
+
   fontColorC0: '#FFFFFF',
   fontColorC1: '#FFFFFF',
   fontColorC2: '#FFFFFF',
