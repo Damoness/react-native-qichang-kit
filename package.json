@@ -60,13 +60,15 @@
     "react": "16.11.0",
     "react-native": "0.62.2",
     "react-native-fast-image": "^8.3.2",
+    "react-native-safe-area-context": "^3.2.0",
     "release-it": "^13.5.8",
     "typescript": "^3.8.3"
   },
   "peerDependencies": {
     "react": "*",
     "react-native": "*",
-    "react-native-fast-image": "*"
+    "react-native-fast-image": "*",
+    "react-native-safe-area-context": "^3.2.0"
   },
   "jest": {
     "preset": "react-native",
