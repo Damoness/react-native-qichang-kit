@@ -2603,6 +2603,13 @@ bcrypt-pbkdf@^1.0.0:
   dependencies:
     tweetnacl "^0.14.3"
 
+beeshell@^2.0.11:
+  version "2.0.11"
+  resolved "https://registry.npmjs.org/beeshell/-/beeshell-2.0.11.tgz#90ed9356312676973db819ef9b8035bc7ea9cbdd"
+  integrity sha512-r4kXd78xxWjRIBUckvq1vGJ/sgcpPQbg/YIrtuJK3l+vn1bj6wtXiNGKTMpaxgI8FoGigSESvRm4IgY60pzIQQ==
+  dependencies:
+    moment "^2.24.0"
+
 before-after-hook@^2.1.0:
   version "2.1.0"
   resolved "https://registry.npmjs.org/before-after-hook/-/before-after-hook-2.1.0.tgz#b6c03487f44e24200dd30ca5e6a1979c5d2fb635"
@@ -7038,6 +7045,11 @@ modify-values@^1.0.0:
   version "1.0.1"
   resolved "https://registry.npmjs.org/modify-values/-/modify-values-1.0.1.tgz#b3939fa605546474e3e3e3c63d64bd43b4ee6022"
   integrity sha512-xV2bxeN6F7oYjZWTe/YPAy6MN2M+sL4u/Rlm2AHCIVGfo2p1yGmBHQ6vHehl4bRTZBdHu3TSkWdYgkwpYzAGSw==
+
+moment@^2.24.0:
+  version "2.29.1"
+  resolved "https://registry.npmjs.org/moment/-/moment-2.29.1.tgz#b2be769fa31940be9eeea6469c075e35006fa3d3"
+  integrity sha512-kHmoybcPV8Sqy59DwNDY3Jefr64lK/by/da0ViFcuA4DH0vQg5Q6Ze5VimxkfQNSC+Mls/Kx53s7TjP1RhFEDQ==
 
 ms@2.0.0:
   version "2.0.0"
