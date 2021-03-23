@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import React, { Component } from 'react';
 import {
   View,
@@ -113,13 +114,13 @@ export default class Swiper<T extends Item> extends Component<Props<T>> {
                 width: '100%',
               }}
             >
-              {data.map((_, i) => {
+              {data.map((_, j) => {
                 return (
                   <View
-                    key={i}
+                    key={j}
                     style={[
                       { height: 3, marginHorizontal: 2.5, borderRadius: 1 },
-                      index === i
+                      index === j
                         ? { backgroundColor: 'white', width: 9 }
                         : {
                             backgroundColor: 'rgba(255,255,255,0.4)',

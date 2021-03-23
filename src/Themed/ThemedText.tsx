@@ -26,8 +26,8 @@ const ThemedText: React.FC<Props> = ({
 }) => {
   let { color } = style || {};
 
-  if (theme == 'dark') color = darkThemeColor || '#FFFFFF';
-  if (theme == 'light' && color == undefined) color = 'black';
+  if (theme === 'dark') color = darkThemeColor || '#FFFFFF';
+  if (theme === 'light' && color === undefined) color = 'black';
 
   if (type) color = colors[type];
 

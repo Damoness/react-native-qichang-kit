@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
-import { TouchableOpacity, TouchableOpacityProps } from 'react-native';
+import {
+  StyleSheet,
+  TouchableOpacity,
+  TouchableOpacityProps,
+} from 'react-native';
 
 type Props = {
   disabledBackgroundColor?: string;
@@ -18,7 +22,7 @@ export default class Button extends Component<Props> {
       <TouchableOpacity
         disabled={disabled}
         style={[
-          { justifyContent: 'center', alignItems: 'center' },
+          styles.container,
           style,
           disabled && { backgroundColor: disabledBackgroundColor },
         ]}
@@ -30,3 +34,7 @@ export default class Button extends Component<Props> {
     );
   }
 }
+
+const styles = StyleSheet.create({
+  container: { justifyContent: 'center', alignItems: 'center' },
+});

@@ -44,7 +44,7 @@ const Image: React.FC<Props> = (props) => {
     };
 
     return (
-      <View style={[borderStyle, style, downloading && { borderWidth: 0 }]}>
+      <View style={[borderStyle, style, downloading && styles.defaultBorder]}>
         <FastImage
           style={[StyleSheet.absoluteFill]}
           source={resolvedSource}
@@ -69,5 +69,11 @@ const Image: React.FC<Props> = (props) => {
     );
   }
 };
+
+const styles = StyleSheet.create({
+  defaultBorder: {
+    borderWidth: 0,
+  },
+});
 
 export default withTheme(Image);

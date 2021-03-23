@@ -1,4 +1,4 @@
-import { Image } from 'react-native';
+import { Image, StyleSheet } from 'react-native';
 import React, { Component } from 'react';
 
 type Props = {
@@ -11,20 +11,24 @@ class DropdownArrow extends Component<Props> {
   };
 
   render() {
-    const theme = this.props.theme;
+    const { theme } = this.props;
 
-    return theme == 'light' ? (
+    return theme === 'light' ? (
       <Image
         source={require('./zhaoche_dropdown_arrow_black.png')}
-        style={{ height: 4, width: 6 }}
+        style={styles.imageSize}
       />
     ) : (
       <Image
         source={require('./zhaoche-dropdown-arrow.png')}
-        style={{ height: 4, width: 6 }}
+        style={styles.imageSize}
       />
     );
   }
 }
+
+const styles = StyleSheet.create({
+  imageSize: { height: 4, width: 6 },
+});
 
 export default DropdownArrow;

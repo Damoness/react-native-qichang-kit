@@ -27,81 +27,87 @@ type Props = {
   onPressClose?: () => void;
 };
 
-const BottomModal = forwardRef<any, PropsWithChildren<Props>>((props, ref) => {
-  const {
-    children,
-    backgroundColor = 'white',
-    hideMask = false,
-    fullScreen = false,
-  } = props;
+export type BottomModalRefProps = {
+  open(): void;
+  close(): void;
+};
 
-  const [contentHeight, setContentHeight] = useState(screenHeight);
+const BottomModal = forwardRef<BottomModalRefProps, PropsWithChildren<Props>>(
+  (props, ref) => {
+    const {
+      children,
+      backgroundColor = 'white',
+      hideMask = false,
+      fullScreen = false,
+    } = props;
 
-  const slideModalRef = useRef<SlideModal<any>>(null);
+    const [contentHeight, setContentHeight] = useState(screenHeight);
 
-  useImperativeHandle(ref, () => ({
-    // 暴露给父组件的方法
-    open: open,
-    close,
-  }));
+    const slideModalRef = useRef<any>();
 
-  const open = () => {
-    slideModalRef.current && slideModalRef.current.open(null);
-  };
+    useImperativeHandle(ref, () => ({
+      // 暴露给父组件的方法
+      open: open,
+      close,
+    }));
 
-  const close = () => {
-    slideModalRef.current && slideModalRef.current.close();
-  };
+    const open = () => {
+      slideModalRef.current && slideModalRef.current.open();
+    };
 
-  const { width, height } = useWindowDimensions();
+    const close = () => {
+      slideModalRef.current && slideModalRef.current.close();
+    };
 
-  return (
-    <SlideModal
-      fullScreenPatch={[true, true, true]}
-      ref={slideModalRef}
-      cancelable={true}
-      screenHeight={height}
-      screenWidth={width}
-      styles={{
-        backdrop: { backgroundColor: 'rgba(0, 0, 0, 0.4)' },
-        container: {
-          top: hideMask ? height - contentHeight : 0,
-        },
-        content: {
-          width: '100%',
-          height: fullScreen ? '95%' : undefined,
-          backgroundColor: 'white',
-          borderTopLeftRadius: 3,
-          borderTopRightRadius: 3,
-        },
-      }}
-    >
-      <SafeAreaView
-        // eslint-disable-next-line react-native/no-inline-styles
-        style={{ backgroundColor: backgroundColor, flex: 1 }}
-        edges={['bottom']}
-        onLayout={(event) => {
-          setContentHeight(event.nativeEvent.layout.height);
+    const { width, height } = useWindowDimensions();
+
+    return (
+      <SlideModal
+        fullScreenPatch={[true, true, true]}
+        ref={slideModalRef}
+        cancelable={true}
+        screenHeight={height}
+        screenWidth={width}
+        styles={{
+          backdrop: { backgroundColor: 'rgba(0, 0, 0, 0.4)' },
+          container: {
+            top: hideMask ? height - contentHeight : 0,
+          },
+          content: {
+            width: '100%',
+            height: fullScreen ? '95%' : undefined,
+            backgroundColor: 'white',
+            borderTopLeftRadius: 3,
+            borderTopRightRadius: 3,
+          },
         }}
       >
-        {children}
-        <TouchableOpacity
-          activeOpacity={0.8}
-          style={styles.deleteButton}
-          onPress={() => {
-            if (props.onPressClose) {
-              props.onPressClose();
-            }
-            close();
-            //ref.current && ref.current.close();
+        <SafeAreaView
+          // eslint-disable-next-line react-native/no-inline-styles
+          style={{ backgroundColor: backgroundColor, flex: 1 }}
+          edges={['bottom']}
+          onLayout={(event) => {
+            setContentHeight(event.nativeEvent.layout.height);
           }}
         >
-          <Image source={require('./pop-upwindows_delete.png')} />
-        </TouchableOpacity>
-      </SafeAreaView>
-    </SlideModal>
-  );
-});
+          {children}
+          <TouchableOpacity
+            activeOpacity={0.8}
+            style={styles.deleteButton}
+            onPress={() => {
+              if (props.onPressClose) {
+                props.onPressClose();
+              }
+              close();
+            }}
+          >
+            <Image source={require('./pop-upwindows_delete.png')} />
+          </TouchableOpacity>
+        </SafeAreaView>
+      </SlideModal>
+    );
+  }
+);
 
 const styles = StyleSheet.create({
   contentContainer: {},

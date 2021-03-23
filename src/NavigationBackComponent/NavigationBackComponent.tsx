@@ -15,7 +15,7 @@ type Props = {
 export default class NavigationBackComponent extends React.Component<Props> {
   render() {
     const source =
-      this.props.theme == 'light'
+      this.props.theme === 'light'
         ? require('./navigation_arrows_black.png')
         : require('./navigation_arrows_white.png');
 
