@@ -11,7 +11,7 @@ import ThemedText, { TextType as ThemedTextType } from './Themed/ThemedText';
 import NavigationBar from './NavigationBar';
 import Swiper from './Swiper';
 
-import BottomModal from './BottomModal';
+import BottomModal, { BottomModalRefProps } from './BottomModal';
 
 import {
   ThemeProvider,
@@ -50,6 +50,7 @@ export {
   ThemedTextType,
   Swiper,
   BottomModal,
+  BottomModalRefProps,
   // RefreshListView,
   // RefreshState,
   // PullDownRefreshAndPullUpLoadMoreListView,
