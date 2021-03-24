@@ -15,6 +15,7 @@ export default class Button extends Component<Props> {
       style,
       disabled,
       disabledBackgroundColor = 'gray',
+      children,
       ...otherProps
     } = this.props;
 
@@ -29,7 +30,7 @@ export default class Button extends Component<Props> {
         activeOpacity={0.8}
         {...otherProps}
       >
-        {this.props.children}
+        {children}
       </TouchableOpacity>
     );
   }
