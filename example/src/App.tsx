@@ -1,6 +1,9 @@
 import * as React from 'react';
 import { StyleSheet, View } from 'react-native';
-// import Swiper from '@damoness/react-native-qichang-kit';
+import {
+  ErrorComponent,
+  NavigationBackComponent,
+} from '@damoness/react-native-qichang-kit';
 
 // const data = Array.from({ length: 6 }).map((item, index) => ({
 //   id: index,
@@ -12,7 +15,8 @@ import { StyleSheet, View } from 'react-native';
 export default function App() {
   return (
     <View style={styles.container}>
-      {/* <Swiper data={data} onPressItem={() => {}} /> */}
+      <NavigationBackComponent theme="light" />
+      <ErrorComponent errorInfo={'111'} />
     </View>
   );
 }
@@ -20,7 +24,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'blue',
+    //backgroundColor: 'blue',
     marginTop: 100,
   },
 });
