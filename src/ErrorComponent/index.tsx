@@ -37,10 +37,7 @@ class ErrorComponent extends Component<Props> {
           style={styles.buttonContainer}
           onPress={onPress}
         >
-          <Image
-            source={require('./assets/Network_anomalies.png')}
-            style={{}}
-          />
+          <Image source={require('./assets/Network_anomalies.png')} />
           <Text style={[styles.text, { color: fontColorC4 }]}>{errorInfo}</Text>
         </TouchableOpacity>
       </View>
