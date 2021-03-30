@@ -10,6 +10,7 @@ import ThemedLineView from './Themed/ThemedLineView';
 import ThemedText, { TextType as ThemedTextType } from './Themed/ThemedText';
 import NavigationBar from './NavigationBar';
 import Swiper from './Swiper';
+import { SafeTouch } from './SafeTouch';
 
 import BottomModal, { BottomModalRefProps } from './BottomModal';
 
@@ -51,6 +52,7 @@ export {
   Swiper,
   BottomModal,
   BottomModalRefProps,
+  SafeTouch,
   // RefreshListView,
   // RefreshState,
   // PullDownRefreshAndPullUpLoadMoreListView,
