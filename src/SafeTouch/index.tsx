@@ -1,1 +1,3 @@
-export { default as SafeTouch } from './SafeTouch';
+import SafeTouch from './SafeTouch';
+
+export default SafeTouch;
