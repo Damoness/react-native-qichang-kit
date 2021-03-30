@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ScrollView, StyleSheet } from 'react-native';
+import { ScrollView, StyleSheet, Text } from 'react-native';
 import {
   Avatar,
   DropdownArrow,
@@ -11,6 +11,7 @@ import {
   NavigationBar,
   ThemedLineView,
   ThemedText,
+  SafeTouch,
 } from '@damoness/react-native-qichang-kit';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
@@ -28,6 +29,14 @@ export default function App() {
   return (
     <SafeAreaProvider>
       <ScrollView style={styles.container}>
+        <SafeTouch
+          activeOpacity={111}
+          onPress={() => {
+            console.log('123456');
+          }}
+        >
+          <Text>123456</Text>
+        </SafeTouch>
         <NavigationBackComponent theme="light" />
         <NavigationBackComponent theme="dark" />
         <Avatar url={imageUrl} size={40} />
@@ -42,12 +51,12 @@ export default function App() {
         <DropdownArrow />
         <Loading />
         {/* <LoadingComponent  /> */}
-        <ThemedLineView style={{ marginVertical: 10 }} />
+        <ThemedLineView style={styles.lineView} />
         {/* <ArticleLoading /> */}
         <NavigationBar />
-        <ThemedLineView style={{ marginVertical: 10 }} />
+        <ThemedLineView style={styles.lineView} />
         <ThemedText>{'111'}</ThemedText>
-        <ThemedLineView style={{ marginVertical: 10 }} />
+        <ThemedLineView style={styles.lineView} />
       </ScrollView>
     </SafeAreaProvider>
   );
@@ -59,5 +68,8 @@ const styles = StyleSheet.create({
     backgroundColor: 'gray',
     //alignItems: 'center',
     marginTop: 50,
+  },
+  lineView: {
+    marginVertical: 10,
   },
 });
